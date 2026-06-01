@@ -509,7 +509,7 @@
       p.life--;
       const a = p.life / p.maxLife;
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r * a, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, Math.max(0, p.r * a), 0, Math.PI * 2);
       ctx.fillStyle = `hsla(${p.hue},100%,64%,${a})`;
       ctx.fill();
     });
